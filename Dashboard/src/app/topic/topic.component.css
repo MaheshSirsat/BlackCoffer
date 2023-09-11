@@ -1,0 +1,6 @@
+.table-striped{
+    background-color: brown;
+}
+thead,tbody{
+    border-radius: 10px;
+}

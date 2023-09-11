@@ -1,0 +1,58 @@
+<div class="container1">
+    <h2 style="text-align: center;">Summary Data</h2>
+
+   <div style="text-align: center; margin: 2% 0%; ">
+    <input type="text" [(ngModel)]="searchdata" (input)="givesearchvalue()" style="border-radius: 10px; padding: 20px; margin: 10px; width: 700px; text-align: center;" id="">
+    <br>
+  
+    <label for="options"><strong>Filter by :</strong></label>
+    <select id="options" [(ngModel)]="filterdata"  style="margin: 1% 1%;">
+      <option  class="item" style="border: 2px solid green;"  value="topic" selected>Topic</option>
+      <option class="item" value="sector">Sector</option>
+      <option  class="item"value="region">Region</option>
+      <option class="item" value="start_year">Start Year</option>
+      <option  class="item"value="end_year">End Year</option>
+      <option class="item" value="source">Source</option>
+      <option  class="item"value="pestle">Pestle</option>
+    </select>
+   </div>
+        
+ 
+    <div class="tablebox">
+        <table class="table table-striped">
+            <thead class="thead-dark " >
+              <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Sector</th>
+                <th scope="col">Region</th>
+                <th scope="col">Start Year</th>
+                <th scope="col">End Year</th>
+                <th scope="col">Relevance</th>
+                <th scope="col">Pestle</th>
+                <th scope="col">Intensity</th>
+                <th scope="col">Source</th>
+                <th scope="col">Country</th>
+              </tr>
+            </thead> 
+            <tbody  style="margin-top: 1%;">
+                <tr *ngFor=" let item of dam">
+            
+                    <td> {{item.topic}} </td>
+                    <td> {{item.sector}} </td>
+                    <td> {{item.region}} </td>
+                    <td> {{item.start_year}} </td>
+                    <td> {{item.end_year}} </td>
+                    <td> {{item.relevance}} </td>
+                    <td> {{item.pestle}} </td>
+                    <td> {{item.intensity}} </td>
+                    <td> {{item.source}} </td>
+                    <td> {{item.country}} </td>
+                    
+                </tr>
+              
+              
+            </tbody>
+          </table>
+    </div>
+    
+</div>
